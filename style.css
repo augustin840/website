@@ -1,0 +1,41 @@
+/* Import de Tailwind CSS */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css');
+
+/* Import de la police Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+/* Styles de base */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Arrière-plan de la section Hero */
+.hero-bg {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1593078332248-c829d4db3b3a?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Texte en dégradé pour le logo */
+.gradient-text {
+    background: -webkit-linear-gradient(45deg, #38bdf8, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Styles pour la galerie d'images sur les pages produits */
+.gallery .thumbnails img {
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    border: 2px solid transparent;
+}
+
+.gallery .thumbnails img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.gallery .thumbnails img.active {
+    opacity: 1;
+    border-color: #06b6d4; /* cyan-500 */
+}
